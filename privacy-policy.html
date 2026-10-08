@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Taras (F1 Companion)</title>
+    <meta name="description" content="Privacy Policy for Taras, the open-source Formula 1 companion Android application, compliant with India's Digital Personal Data Protection Act 2023.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0e14;
+            --card-bg: #151a23;
+            --card-border: rgba(255, 255, 255, 0.08);
+            --accent-red: #e10600;
+            --accent-red-glow: rgba(225, 6, 0, 0.25);
+            --text-primary: #f0f3f8;
+            --text-secondary: #9aa5b8;
+            --text-muted: #64748b;
+            --highlight-bg: rgba(225, 6, 0, 0.1);
+            --badge-bg: rgba(255, 255, 255, 0.06);
+            --pill-green: #10b981;
+            --pill-green-bg: rgba(16, 185, 129, 0.12);
+            --pill-blue: #3b82f6;
+            --pill-blue-bg: rgba(59, 130, 246, 0.12);
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #f8fafc;
+                --card-bg: #ffffff;
+                --card-border: rgba(0, 0, 0, 0.08);
+                --text-primary: #0f172a;
+                --text-secondary: #475569;
+                --text-muted: #94a3b8;
+                --highlight-bg: rgba(225, 6, 0, 0.06);
+                --badge-bg: rgba(0, 0, 0, 0.04);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 2rem 1.25rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 840px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--highlight-bg);
+            color: var(--accent-red);
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: var(--pill-green-bg);
+            color: var(--pill-green);
+            padding: 0.25rem 0.65rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-left: 0.5rem;
+        }
+
+        .status-pill-blue {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: var(--pill-blue-bg);
+            color: var(--pill-blue);
+            padding: 0.25rem 0.65rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-left: 0.5rem;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .effective-date {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--accent-red);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .summary-card h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--accent-red);
+        }
+
+        .summary-card p {
+            color: var(--text-primary);
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        section h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            color: var(--text-primary);
+        }
+
+        section p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        section p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--pill-green);
+            font-weight: bold;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        th {
+            background: var(--badge-bg);
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+        }
+
+        td {
+            color: var(--text-secondary);
+        }
+
+        .badge-none {
+            display: inline-block;
+            background: var(--pill-green-bg);
+            color: var(--pill-green);
+            padding: 0.2rem 0.55rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.75rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .nav-link-btn {
+            display: inline-flex;
+            align-items: center;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .nav-link-btn:hover {
+            border-color: var(--accent-red);
+            color: var(--accent-red);
+        }
+
+        a {
+            color: var(--accent-red);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--card-border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-badge">
+                🏎️ Taras F1 Companion
+                <span class="status-pill">100% On-Device</span>
+                <span class="status-pill-blue">DPDPA 2023 India</span>
+            </div>
+            <h1>Privacy Policy</h1>
+            <p class="effective-date">Effective Date: October 8, 2026 &bull; Version 2.0 (Indian Law Compliant)</p>
+            <div class="nav-links">
+                <a href="privacy-policy.html" class="nav-link-btn" style="border-color: var(--accent-red); color: var(--accent-red);">🛡️ Privacy Policy</a>
+                <a href="terms-of-service.html" class="nav-link-btn">⚖️ Terms of Service</a>
+                <a href="about.html" class="nav-link-btn">🏎️ About Taras</a>
+            </div>
+        </header>
+
+        <div class="summary-card">
+            <h2>Core Commitment</h2>
+            <p>
+                We collect zero digital personal data on any server. Your nickname, favorite driver preferences, and card binder are stored exclusively on your physical device via Android Jetpack DataStore and Room SQLite. No telemetry, no ad tracking, and no cloud profile. Public news is fetched from public RSS feeds over HTTPS.
+            </p>
+        </div>
+
+        <section>
+            <h2>🇮🇳 1. Compliance with Digital Personal Data Protection Act, 2023 (DPDPA)</h2>
+            <p>
+                In compliance with the <strong>Digital Personal Data Protection Act, 2023</strong> of the Republic of India:
+            </p>
+            <ul>
+                <li><strong>Data Fiduciary:</strong> Yash Ajagiya is the designated Data Fiduciary for the Taras mobile application.</li>
+                <li><strong>Purpose Limitation (Section 6):</strong> Any user preferences entered are processed solely on-device to personalize local displays, widgets, and countdown reminders.</li>
+                <li><strong>Data Minimization:</strong> The app does not require account creation, emails, phone numbers, or passwords.</li>
+                <li><strong>Zero Remote Processing:</strong> No personal data is ever transmitted, logged, or retained on remote cloud servers.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>⚖️ 2. Rights of the Data Principal (Sections 11–14 DPDPA)</h2>
+            <p>As a Data Principal under Indian law, you have full statutory rights:</p>
+            <ul>
+                <li><strong>Right to Access (Section 11):</strong> Inspect all stored data directly within the app settings.</li>
+                <li><strong>Right to Correction (Section 12):</strong> Update or edit your nickname and preferences at any time.</li>
+                <li><strong>Right to Erasure (Section 12):</strong> Permanently wipe all data by clearing app data in Android Settings or uninstalling the app.</li>
+                <li><strong>Right to Grievance Redressal (Section 13):</strong> Direct recourse to our designated Grievance Officer.</li>
+                <li><strong>Right to Nominate (Section 14):</strong> Right to nominate an individual pursuant to the Act.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🔒 3. Information We Do Not Collect</h2>
+            <p>Taras does not collect, record, or share any personal information:</p>
+            <ul>
+                <li>No real names, email addresses, phone numbers, or contacts.</li>
+                <li>No coarse or precise GPS or network location tracking.</li>
+                <li>No advertising identifiers (GAID), device hardware IDs, or IP logs.</li>
+                <li>No browsing behavior or article reading telemetry.</li>
+                <li>No commercial advertising SDKs, marketing trackers, or third-party analytical tools.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>💾 4. On-Device Storage (Strictly Local)</h2>
+            <p>To provide personalization and offline access, the app stores preferences strictly locally:</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Purpose</th>
+                            <th>Storage Technology</th>
+                            <th>Transmitted?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nickname / Name</td>
+                            <td>Greeting on dashboard &amp; widgets</td>
+                            <td>Local DataStore</td>
+                            <td><span class="badge-none">Never</span></td>
+                        </tr>
+                        <tr>
+                            <td>Favorite Driver &amp; Team</td>
+                            <td>Highlighting favorite driver widgets</td>
+                            <td>Local DataStore</td>
+                            <td><span class="badge-none">Never</span></td>
+                        </tr>
+                        <tr>
+                            <td>Theme / Language Preference</td>
+                            <td>App display appearance (Light/Dark/Language)</td>
+                            <td>Local DataStore</td>
+                            <td><span class="badge-none">Never</span></td>
+                        </tr>
+                        <tr>
+                            <td>F1 GridTCG Collection</td>
+                            <td>Card binder &amp; mystery packs</td>
+                            <td>Local Room SQLite</td>
+                            <td><span class="badge-none">Never</span></td>
+                        </tr>
+                        <tr>
+                            <td>Race Standings &amp; Schedules</td>
+                            <td>Offline viewing &amp; fast app loading</td>
+                            <td>Local Room SQLite</td>
+                            <td><span class="badge-none">Never</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>👶 5. Children's Privacy (Section 9 DPDPA 2023)</h2>
+            <p>
+                Taras complies with Section 9 of the DPDPA 2023 and COPPA. Taras does not process identifiable personal data of children, nor does it conduct behavioral profiling, tracking, or targeted advertising directed at children. The app is completely safe for motorsport enthusiasts of all ages.
+            </p>
+        </section>
+
+        <section>
+            <h2>📡 6. Network Communications &amp; Encryption</h2>
+            <p>Taras connects to the internet strictly for public, non-personal data:</p>
+            <ul>
+                <li><strong>Public Sports Data:</strong> Fetched from static repository files (<a href="https://github.com/yashajagiya/tarasF1Data" target="_blank" rel="noopener">tarasF1Data</a>) over HTTPS.</li>
+                <li><strong>News Aggregator:</strong> Parsed on-device directly from public RSS feeds (Motorsport.com, Autosport, RaceFans, PlanetF1).</li>
+                <li><strong>Security:</strong> All network traffic uses Transport Layer Security (TLS/HTTPS).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🔔 7. Device Permissions</h2>
+            <ul>
+                <li><strong>POST_NOTIFICATIONS (Android 13+):</strong> Used solely for local on-device race weekend reminders scheduled by Android WorkManager. No remote push tokens are collected.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🛡️ 8. Reasonable Security Practices (Section 43A IT Act)</h2>
+            <p>
+                In accordance with Section 43A of the Information Technology Act, 2000 and SPDI Rules 2011, all local data is isolated in Android's sandbox model with encrypted network transport.
+            </p>
+        </section>
+
+        <section>
+            <h2>📬 9. Grievance Officer (IT Rules 2021 &amp; DPDPA 2023)</h2>
+            <p>
+                In compliance with Rule 3(2) of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 and Section 13 of DPDPA 2023, you may contact our designated Grievance Officer:
+            </p>
+            <p>
+                <strong>Grievance Officer:</strong> Yash Ajagiya<br>
+                <strong>Email:</strong> <a href="mailto:yashajagiya@gmail.com">yashajagiya@gmail.com</a><br>
+                <strong>Jurisdiction:</strong> Gujarat, India<br>
+                <strong>Timelines:</strong> Acknowledgment within 48 hours; Resolution within 15–30 days.
+            </p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Taras &bull; Developed by Yash Ajagiya &bull; Open Source Apache 2.0 &bull; Unofficial Formula 1 Companion</p>
+        </footer>
+    </div>
+</body>
+</html>

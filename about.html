@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Taras (F1 Companion)</title>
+    <meta name="description" content="About Taras, the high-performance, tracker-free Formula 1 companion Android application.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0e14;
+            --card-bg: #151a23;
+            --card-border: rgba(255, 255, 255, 0.08);
+            --accent-red: #e10600;
+            --accent-red-glow: rgba(225, 6, 0, 0.25);
+            --text-primary: #f0f3f8;
+            --text-secondary: #9aa5b8;
+            --text-muted: #64748b;
+            --highlight-bg: rgba(225, 6, 0, 0.1);
+            --badge-bg: rgba(255, 255, 255, 0.06);
+            --pill-green: #10b981;
+            --pill-green-bg: rgba(16, 185, 129, 0.12);
+            --pill-blue: #3b82f6;
+            --pill-blue-bg: rgba(59, 130, 246, 0.12);
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #f8fafc;
+                --card-bg: #ffffff;
+                --card-border: rgba(0, 0, 0, 0.08);
+                --text-primary: #0f172a;
+                --text-secondary: #475569;
+                --text-muted: #94a3b8;
+                --highlight-bg: rgba(225, 6, 0, 0.06);
+                --badge-bg: rgba(0, 0, 0, 0.04);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 2rem 1.25rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 840px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--highlight-bg);
+            color: var(--accent-red);
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .effective-date {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .summary-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-left: 4px solid var(--accent-red);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .summary-card h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--accent-red);
+        }
+
+        .summary-card p {
+            color: var(--text-primary);
+            font-size: 1.05rem;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        section h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            color: var(--text-primary);
+        }
+
+        section p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        section p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-red);
+            font-weight: bold;
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .mini-card {
+            background: var(--badge-bg);
+            border: 1px solid var(--card-border);
+            padding: 1.25rem;
+            border-radius: 12px;
+        }
+
+        .mini-card h3 {
+            font-size: 1.05rem;
+            font-family: 'Outfit', sans-serif;
+            margin-bottom: 0.4rem;
+            color: var(--text-primary);
+        }
+
+        .mini-card p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .nav-link-btn {
+            display: inline-flex;
+            align-items: center;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .nav-link-btn:hover {
+            border-color: var(--accent-red);
+            color: var(--accent-red);
+        }
+
+        a {
+            color: var(--accent-red);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--card-border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-badge">
+                🏎️ Taras (तरस्)
+            </div>
+            <h1>About Taras</h1>
+            <p class="effective-date">A high-performance, tracker-free Formula 1 companion for Android</p>
+            <div class="nav-links">
+                <a href="privacy-policy.html" class="nav-link-btn">🛡️ Privacy Policy</a>
+                <a href="terms-of-service.html" class="nav-link-btn">⚖️ Terms of Service</a>
+                <a href="about.html" class="nav-link-btn" style="border-color: var(--accent-red); color: var(--accent-red);">🏎️ About Taras</a>
+            </div>
+        </header>
+
+        <div class="summary-card">
+            <h2>The Meaning of Taras (तरस्)</h2>
+            <p>
+                In classical Sanskrit, <strong>"Taras" (तरस्)</strong> translates to speed, velocity, dynamic energy, impetus, and strength. It encapsulates the pure soul of motorsport: lightning reflexes, supreme aerodynamics, and tireless pursuit of performance.
+            </p>
+        </div>
+
+        <section>
+            <h2>👨‍💻 Developer &amp; Philosophy</h2>
+            <p>
+                Taras is designed and built by <strong>Yash Ajagiya</strong>, an independent Android engineer and Formula 1 fan from India.
+            </p>
+            <p>
+                Taras was born to reject bloated, ad-infested sports apps. Instead, Taras provides a clean, elegant, Google-inspired Material 3 aesthetic, zero advertising, zero accounts, and 100% on-device private data storage.
+            </p>
+        </section>
+
+        <section>
+            <h2>🌟 Core Design Pillars</h2>
+            <div class="grid-cards">
+                <div class="mini-card">
+                    <h3>🔒 100% Private</h3>
+                    <p>No account sign-up, no analytics trackers, no ad networks. All preferences live strictly on your device.</p>
+                </div>
+                <div class="mini-card">
+                    <h3>🇮🇳 Indian Legal Adherence</h3>
+                    <p>Built compliant with India's Digital Personal Data Protection Act (DPDPA 2023) and IT Act 2000.</p>
+                </div>
+                <div class="mini-card">
+                    <h3>⚡ Modern &amp; Open Source</h3>
+                    <p>Powered by Jetpack Compose, Room, DataStore, and Navigation 3 under the Apache 2.0 license.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>📱 Key Features</h2>
+            <ul>
+                <li><strong>The Paddock:</strong> Real-time motorsport news parsed from public RSS feeds using Ksoup.</li>
+                <li><strong>The Grid:</strong> 2026 driver &amp; constructor standings, detailed career statistics, and head-to-head comparison tool.</li>
+                <li><strong>Race Weekend Calendar:</strong> Automatic countdown timers to FP1, FP2, FP3, Qualifying, Sprint, and Grand Prix.</li>
+                <li><strong>F1 GridTCG 2026:</strong> Free, offline digital trading cards with scratch-to-reveal packs and battle arena.</li>
+                <li><strong>Glance Widgets:</strong> Beautiful Android home-screen countdown and standings widgets.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>📬 Legal &amp; Grievance Redressal</h2>
+            <p>
+                Taras operates as an unofficial fan companion under nominative fair use (Section 30, Trade Marks Act 1999).
+            </p>
+            <p>
+                <strong>Developer &amp; Grievance Officer:</strong> Yash Ajagiya<br>
+                <strong>Email:</strong> <a href="mailto:yashajagiya@gmail.com">yashajagiya@gmail.com</a><br>
+                <strong>GitHub:</strong> <a href="https://github.com/yashajagiya/Taras" target="_blank" rel="noopener">github.com/yashajagiya/Taras</a><br>
+                <strong>Location:</strong> Gujarat, India
+            </p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Taras &bull; Developed by Yash Ajagiya &bull; Open Source Apache 2.0 &bull; Unofficial Formula 1 Companion</p>
+        </footer>
+    </div>
+</body>
+</html>
